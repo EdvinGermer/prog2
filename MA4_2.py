@@ -20,7 +20,7 @@ def main():
 	python_time = []
 	numba_time = []
 	cpp_time = []
-	for n in range(30,45):
+	for n in range(30,46):
 		x_axis.append(n)
 
 		# Python

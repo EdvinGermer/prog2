@@ -20,7 +20,7 @@ def main():
 	python_time = []
 	numba_time = []
 	cpp_time = []
-	for n in range(10,25):
+	for n in range(30,45):
 		x_axis.append(n)
 
 		# Python
@@ -51,7 +51,7 @@ def main():
 	plt.xlabel("nth fibonacci number")
 	plt.ylabel("Calculation time")
 	plt.title("Fibonacci comparison")
-	plt.savefig('fib_plo_labeltestt.png')
+	plt.savefig('fib_plot.png')
 	print()
 
 

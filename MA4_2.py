@@ -20,7 +20,7 @@ def main():
 	python_time = []
 	numba_time = []
 	cpp_time = []
-	for n in range(10,20):
+	for n in range(30,45):
 		x_axis.append(n)
 
 		# Python
@@ -52,24 +52,23 @@ def main():
 	plt.title("Fibonacci comparison")
 	plt.savefig('fib_plot.png')
 	print()
-	print()
 
 
 
 	# Calculate 47th fib number with numba
-	start = pc()
-	fib = fib_numba(47)
-	end = pc()
-	print(f'Numba 47th fib number: {fib} in {end-start} seconds')
-	print()
+	#start = pc()
+	#fib = fib_numba(47)
+	#end = pc()
+	#print(f'Numba 47th fib number: {fib} in {end-start} seconds')
+	#print()
 
 	# Calculate 47th fib number with C++
-	start = pc()
-	f = Person(47)
-	fib = f.fib()
-	end = pc()
-	print(f'Numba 47th fib number: {fib} in {end-start} seconds')
-	print()
+	#start = pc()
+	#f = Person(47)
+	#fib = f.fib()
+	#end = pc()
+	#print(f'C++ 47th fib number: {fib} in {end-start} seconds')
+	#print()
 
 if __name__ == '__main__':
 	main()

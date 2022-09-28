@@ -43,7 +43,7 @@ def main():
 		cpp_time.append(end-start)
 
 	
-	# # Plots
+	# Plot for 3 calculations
 	# plt.plot(x_axis, python_time, 'red', label='python')
 	# plt.plot(x_axis, numba_time, 'blue', label='Numba')
 	# plt.plot(x_axis, cpp_time, 'green', label='C++')
@@ -54,31 +54,31 @@ def main():
 	# plt.savefig('fib_plot.png')
 	# print()
 
+	# Plot for 2 calculations
+	# plt.plot(x_axis, python_time, 'red', label='python')
+	# plt.plot(x_axis, numba_time, 'blue', label='Numba')
+	# plt.legend(loc="upper left")
+	# plt.xlabel("nth fibonacci number")
+	# plt.ylabel("Calculation time")
+	# plt.title("Fibonacci comparison")
+	# plt.savefig('fib_plot_2.png')
+	# print()
 
-	plt.plot(x_axis, python_time, 'red', label='python')
-	plt.plot(x_axis, numba_time, 'blue', label='Numba')
-	plt.legend(loc="upper left")
-	plt.xlabel("nth fibonacci number")
-	plt.ylabel("Calculation time")
-	plt.title("Fibonacci comparison")
-	plt.savefig('fib_plot_2.png')
+
+	#Calculate 47th fib number with numba
+	start = pc()
+	fib = fib_numba(46)
+	end = pc()
+	print(f'Numba 47th fib number: {fib} in {end-start} seconds')
 	print()
 
-
-	# Calculate 47th fib number with numba
-	#start = pc()
-	#fib = fib_numba(47)
-	#end = pc()
-	#print(f'Numba 47th fib number: {fib} in {end-start} seconds')
-	#print()
-
-	# Calculate 47th fib number with C++
-	#start = pc()
-	#f = Person(47)
-	#fib = f.fib()
-	#end = pc()
-	#print(f'C++ 47th fib number: {fib} in {end-start} seconds')
-	#print()
+	#Calculate 47th fib number with C++
+	start = pc()
+	f = Person(46)
+	fib = f.fib()
+	end = pc()
+	print(f'C++ 47th fib number: {fib} in {end-start} seconds')
+	print()
 
 if __name__ == '__main__':
 	main()

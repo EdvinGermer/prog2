@@ -10,7 +10,8 @@ class Person(object):
 		lib.Person_get.argtypes = [ctypes.c_void_p]
 		lib.Person_get.restype = ctypes.c_int
 
-		lib.Person_fib.argtypes = [ctypes.c_void_p]
+		# Added fib method in constructor
+		lib.Person_fib.argtypes = [ctypes.c_void_p]  
 		lib.Person_fib.restype = ctypes.c_int
 		
 		lib.Person_set.argtypes = [ctypes.c_void_p,ctypes.c_int]
@@ -22,7 +23,7 @@ class Person(object):
 		return lib.Person_get(self.obj)
 
 	
-	def fib(self):
+	def fib(self):  # Added fib method
 		return lib.Person_fib(self.obj)
 
 	def set(self, age):

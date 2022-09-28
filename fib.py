@@ -1,6 +1,7 @@
 from numba import njit
 
 def fib_py(n):
+        """ Recursive fibonacci function from instructions """
         if n <= 1:
                 return n
         else:
@@ -9,6 +10,7 @@ def fib_py(n):
 
 @njit
 def fib_numba(n):
+        """ Recursive fibonacci function from instructions with numba decorator """
         if n <= 1:
                 return n
         else:

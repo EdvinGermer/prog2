@@ -7,7 +7,7 @@ from time import perf_counter as pc
 
 def main():
 	print()
-	print('Initial test of fib functions:')
+	print('Initial test of fib functions:')  # Testing if fib functions give same result
 	print('Python fib: ', fib_py(10))
 	print('Numba fib: ', fib_numba(10))
 	f = Person(10)
@@ -20,7 +20,8 @@ def main():
 	python_time = []
 	numba_time = []
 	cpp_time = []
-	for n in range(20,31):
+	for n in range(20,31):  
+		""" Iterating n for fib(n) and commputing with python, numba and C++ and saving calculation time """
 		x_axis.append(n)
 
 		# Python

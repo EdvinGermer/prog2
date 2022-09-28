@@ -65,20 +65,27 @@ def main():
 	# print()
 
 
+	print('\nCalculating the 47th fib number')
 	#Calculate 47th fib number with numba
 	start = pc()
-	fib = fib_numba(46)
+	fib = fib_numba(47)
 	end = pc()
 	print(f'Numba 47th fib number: {fib} in {end-start} seconds')
-	print()
 
 	#Calculate 47th fib number with C++
 	start = pc()
-	f = Person(46)
+	f = Person(47)
 	fib = f.fib()
 	end = pc()
 	print(f'C++ 47th fib number: {fib} in {end-start} seconds')
 	print()
 
+
+	# Calculating the 46th fib number works well. You get the same result
+	# and Numba is slightly faster than C++, roughly 30s.
+
+	# Calculating the 47th fib number does not work. C++ gives a negativ
+	# number and takes 10 more seconds to compute as compared to Numba.
+	
 if __name__ == '__main__':
 	main()

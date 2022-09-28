@@ -81,11 +81,18 @@ def main():
 	print()
 
 
-	# Calculating the 46th fib number works well. You get the same result
-	# and Numba is slightly faster than C++, roughly 30s.
+	# The 46th fib number is 1836311903  and is fine for a 32bit system
+	# The 47th fib number is 2971215073 and is to big for a 32bit system
+	# Too big numbers are limited by "Integer overflow".
 
-	# Calculating the 47th fib number does not work. C++ gives a negativ
-	# number and takes 10 more seconds to compute as compared to Numba.
+	# Calculating the 46th fib number works well with both Numba and C++
+	 
+	# Calculating the 47th fib number does not work for C++ but it does
+	# work for Numba. C++ returns a negative value.
+
+	# This suggests that C++ runs 32bit and Numba possible
+	# runs 64bit? 
+
 	
 if __name__ == '__main__':
 	main()
